@@ -12,8 +12,8 @@ Install [docker](https://docs.docker.com/install/overview/) and [docker-compose]
 Download the code and switch to the code root path
 
 ```
-$ git clone https://github.com/primihub/primihub.git
-$ cd primihub
+git clone https://github.com/primihub/primihub.git
+cd primihub
 ```
 
 
@@ -22,20 +22,20 @@ $ cd primihub
 
 
 ### Start the test nodes
- 
 
-   
+
+
 Start three docker containers using docker-compose.
     The container includes: one simple bootstrap node, three nodes
 
   ```bash
-  $ docker-compose up
+  docker-compose up
   ```
 
 Check out the running docker **container**
 
 ```bash
-$ docker ps
+docker ps
 ```
 ```
   CONTAINER ID   IMAGE                                COMMAND                  CREATED          STATUS          PORTS                                                                         NAMES
@@ -44,7 +44,7 @@ cf875c1280be   primihub-node:1.0.5                  "/bin/bash -c './pri…"   1
 11d55ce06ff0   primihub-node:1.0.5                  "/bin/bash -c './pri…"   11 minutes ago   Up 11 minutes   0.0.0.0:11120->12120/tcp, 0.0.0.0:11121->12121/tcp, 0.0.0.0:8051->50050/tcp   node1_primihub
 68befa6ab2a5   primihub/simple-bootstrap-node:1.0   "/app/simple-bootstr…"   11 minutes ago   Up 11 minutes   0.0.0.0:4001->4001/tcp                                                        simple_bootstrap_node
 
-```                                                   
+```
 
 
 ### Create an MPC task
@@ -53,7 +53,7 @@ cf875c1280be   primihub-node:1.0.5                  "/bin/bash -c './pri…"   1
 
 
 ```bash
-$ docker run --network=host -it primihub/primihub-node:1.0.5 ./primihub-cli --server=127.0.0.1:8050
+docker run --network=host -it primihub/primihub-node:1.0.5 ./primihub-cli --server=127.0.0.1:8050
 ```
 
 > 💡 The node response the task
@@ -67,7 +67,7 @@ $ docker run --network=host -it primihub/primihub-node:1.0.5 ./primihub-cli --se
 >  1. Which node is requested to start the task.
 >  2. Which shared datasets are used.
 >  3. What kind of private computing tasks to do.
- 
+
 In this example, primihub-cli will use the default parameters to request an ABY3 tripartite logistic regression test task from *** node 0 ***. For the parameters that can be specified by cli, please refer to *** [Create task](http://docs.primihub.com/docs/advance-usage/create-tasks) ***
 
 ## Advanced use
