@@ -29,7 +29,7 @@ Start three docker containers using docker-compose.
     The container includes: one simple bootstrap node, three nodes
 
   ```bash
-  docker-compose up
+  docker-compose up -d
   ```
 
 Check out the running docker **container**
