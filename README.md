@@ -1,4 +1,7 @@
 # Primihub 
+![build workflow](https://github.com/primihub/primihub/actions/workflows/main.yml/badge.svg?branch=master)
+[![Gitter](https://badges.gitter.im/primihub/community.svg)](https://gitter.im/primihub/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ## Feature
 Primihub is a platform that supports Multi-Party Computing(MPC), Federated Learning, Private set intersection (PSI), and Private Information Retrieval (PIR) features, and supports extensions of data source access, data consumption, access application, syntax, semantic and security protocols. For details, see Primihub [Core Feature](http://docs.primihub.com/docs/category/%E6%A0%B8%E5%BF%83%E7%89%B9%E6%80%A7)
 
@@ -67,8 +70,8 @@ docker run --network=host -it primihub/primihub-node:1.0.5 ./primihub-cli --serv
 >  1. Which node is requested to start the task.
 >  2. Which shared datasets are used.
 >  3. What kind of private computing tasks to do.
-
-In this example, primihub-cli will use the default parameters to request an ABY3 tripartite logistic regression test task from *** node 0 ***. For the parameters that can be specified by cli, please refer to *** [Create task](http://docs.primihub.com/docs/advance-usage/create-tasks) ***
+ 
+In this example, primihub-cli will use the default parameters to request an ABY3 tripartite logistic regression test task from *** node 0 ***. For the parameters that can be specified by cli, please refer to *** [Create task](https://docs.primihub.com/docs/category/%E5%88%9B%E5%BB%BA%E4%BB%BB%E5%8A%A1) ***
 
 ## Advanced use
    To learn how to start from native applications and how to use Primihub features to implement more applications, see [Advanced Usage](http://docs.primihub.com/docs/category/%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8)
